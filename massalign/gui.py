@@ -1,7 +1,7 @@
 
 try:
     # for Python2
-    from Tkinter import *   ## notice capitalized T in Tkinter 
+    from Tkinter import *  
 except ImportError:
     # for Python3
     from tkinter import *
@@ -603,7 +603,7 @@ class DisplayFrame(Frame):
 		* *Output*:
 			* **alignment_list**: A list of alignments in Pharaoh format.
 		"""
-		if isinstance(word_alignments, basestring):
+		if isinstance(word_alignments, str):
 			alignment_list = [[[int(v)-1] for v in w.split('-')] for w in word_alignments.strip().split(' ')]
 			return alignment_list
 		else:
